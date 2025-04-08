@@ -1,5 +1,7 @@
 import Header from "@/components/header";
 import styles from "./page.module.css";
+import HeroSection from "@/components/heroSection";
+import Categories from "@/components/categories";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -174,51 +176,11 @@ export default function Home() {
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-          <section className={styles.heroSection}>
-            <div className={styles.heroContent}>
-              <span className={styles.heroTag}>Meme do Dia</span>
-              <h2 className={styles.heroTitle}>{memeOfTheDay.title}</h2>
-              <p className={styles.heroDescription}>
-                {memeOfTheDay.description}
-              </p>
-              <div className={styles.heroAuthor}>
-                <img
-                  src={memeOfTheDay.authorAvatar}
-                  alt={memeOfTheDay.author}
-                />
-                <span>Por {memeOfTheDay.author}</span>
-              </div>
-              <div className={styles.heroStats}>
-                <span>❤️ {memeOfTheDay.likes}</span>
-                <span>💬 {memeOfTheDay.comments}</span>
-              </div>
-              <button className={styles.heroButton}>Ver meme completo</button>
-            </div>
-            <div className={styles.heroImageContainer}>
-              <img
-                src={memeOfTheDay.image}
-                alt={memeOfTheDay.title}
-                className={styles.heroImage}
-              />
-            </div>
-          </section>
+          <HeroSection memeOfTheDay={memeOfTheDay} />
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
-          <section className={styles.categoriesSection}>
-            <h2 className={styles.sectionTitle}>Explore por Categorias</h2>
-            <div className={styles.categoriesGrid}>
-              {categories.map((category) => (
-                <div key={category.id} className={styles.categoryCard}>
-                  <span className={styles.categoryIcon}>{category.icon}</span>
-                  <h3 className={styles.categoryName}>{category.name}</h3>
-                  <span className={styles.categoryCount}>
-                    {category.count} memes
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
+          <Categories categories={categories} />
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
