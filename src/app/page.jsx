@@ -1,3 +1,4 @@
+import Header from "@/components/header";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -167,28 +168,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <h1>MemeVerse</h1>
-          <span>🌟</span>
-        </div>
-        <nav className={styles.nav}>
-          <a href="#" className={styles.active}>
-            Home
-          </a>
-          <a href="#">Trending</a>
-          <a href="#">Create</a>
-          <a href="#">Categories</a>
-          <a href="#">Profile</a>
-        </nav>
-
-        <div className={styles.userActions}>
-          <button className={styles.notificationBtn}>🔔</button>
-          <button className={styles.userAvatar}>
-            <img src="https://i.pravatar.cc/150?img=3" alt="Your profile" />
-          </button>
-        </div>
-      </header>
+      <Header />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
