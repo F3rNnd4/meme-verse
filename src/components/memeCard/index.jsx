@@ -21,7 +21,7 @@ const MemeCard = ({ meme }) => {
                 <p className={styles.memeDescription}>{meme.description}</p>
 
                 {/* COMPONENTE: InteractionBar */}
-                <InteractionBar />
+                <InteractionBar meme={meme}/>
                 {/* FIM COMPONENTE: InteractionBar */}
             </div>
         </div>

@@ -5,6 +5,7 @@ import Categories from "@/components/categories";
 import Footer from "@/components/footer";
 import SideBar from "@/components/sideBar";
 import MemeCard from "@/components/memeCard";
+import InteractionBar from "@/components/interactionBar";
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
